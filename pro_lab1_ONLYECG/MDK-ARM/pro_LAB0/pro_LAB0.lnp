@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+"pro_lab0\startup_stm32f072xb.o"
+"pro_lab0\main.o"
+"pro_lab0\stm32f0xx_it.o"
+"pro_lab0\stm32f0xx_hal_msp.o"
+"pro_lab0\stm32f0xx_hal_i2c.o"
+"pro_lab0\stm32f0xx_hal_i2c_ex.o"
+"pro_lab0\stm32f0xx_hal_rcc.o"
+"pro_lab0\stm32f0xx_hal_rcc_ex.o"
+"pro_lab0\stm32f0xx_hal.o"
+"pro_lab0\stm32f0xx_hal_gpio.o"
+"pro_lab0\stm32f0xx_hal_dma.o"
+"pro_lab0\stm32f0xx_hal_cortex.o"
+"pro_lab0\stm32f0xx_hal_pwr.o"
+"pro_lab0\stm32f0xx_hal_pwr_ex.o"
+"pro_lab0\stm32f0xx_hal_flash.o"
+"pro_lab0\stm32f0xx_hal_flash_ex.o"
+"pro_lab0\stm32f0xx_hal_exti.o"
+"pro_lab0\stm32f0xx_hal_tim.o"
+"pro_lab0\stm32f0xx_hal_tim_ex.o"
+"pro_lab0\stm32f0xx_hal_uart.o"
+"pro_lab0\stm32f0xx_hal_uart_ex.o"
+"pro_lab0\system_stm32f0xx.o"
+--strict --scatter "pro_LAB0\pro_LAB0.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "pro_LAB0.map" -o pro_LAB0\pro_LAB0.axf

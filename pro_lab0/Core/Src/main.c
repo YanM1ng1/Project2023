@@ -161,9 +161,9 @@ int main(void)
 	HAL_Delay(3);
 	dda = 0x04;
 	HAL_I2C_Mem_Write(&hi2c1,0xbc,0x0d,1,&dda,1,100);	
-	dda = 0x10;
-	HAL_I2C_Mem_Write(&hi2c1,0xbc,0x09,1,&dda,1,100);
 	dda = 0x09;
+	HAL_I2C_Mem_Write(&hi2c1,0xbc,0x09,1,&dda,1,100);
+	dda = 0x00;
 	HAL_I2C_Mem_Write(&hi2c1,0xbc,0x0A,1,&dda,1,100);
 	dda = 0X00;
 	HAL_I2C_Mem_Write(&hi2c1,0xbc,0x3E,1,&dda,1,100);
@@ -244,6 +244,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	tran[0] = '1';
+		tran[1] = '1';
+		tran[2] = 'k';
+		tran[3] = '1';
+	
+	HAL_UART_Transmit(&huart3,tran,4,100);
+HAL_Delay(3000);
   while (1)
   {
 
